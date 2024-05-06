@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tz number</title>
+</head>
+
+<body>
+    <label for="">check number if its Tanzanian</label>
+    <input type="text" id="num"><br><br>
+
+    <label>select company</label>
+    <select name="" id="">
+        <option id="voda">vodacom</option>
+        <option id="tig">Tigo</option>
+        <option id="air">Airtel</option>
+        <option id="halo">Halotel</option>
+        <option id="ttc">TTCL</option>
+    </select><br><br>
+    <label>Re-enter the number</label>
+    <input type="text" id="namba"><br><br>
+    <input type="button" onclick="validate()" value="Validate">
+    <script type="text/javascript">
+        function validate() {
+            var check = document.getElementById("num").value;
+            var vodacom = document.getElementById("namba").value;
+            var tigo = document.getElementById("namba").value;
+            var airtel = document.getElementById("namba").value;
+            var halotel = document.getElementById("namba").value;
+            var ttcl = document.getElementById("namba").value;
+            var tznum = /^[+]255[0-9]{9}$/;
+            var vo = /^07[4-6]{1}[0-9]{8}$/;
+            var tigo1 = /^071[0-9]{7}$/;
+            var tigo2 = /^065[0-9]{7}$/;
+            var tigo3 = /^0675[0-9]{6}$/;
+            var airtel1 = /^078[0-9]{7}$/;
+            var airtel2 = /^068[0-9]{7}$/;
+            var halo = /^062[0-9]{7}$/;
+            var ttc = /^073[0-9]{7}$/;
+            if (tznum.test(check) == true) {
+                alert("the number is Tanzanian number");
+            }
+            for (var i = 0; i <= 8; i++) {
+                if (tigo1.test(tigo) == true) {
+                    alert("the number of Tigo");
+                }
+                else if (tigo2.test(tigo) == true) {
+                    alert("the number of Tigo");
+                }
+
+                else if (tigo3.test(tigo) == true) {
+                    alert("the number of Tigo");
+                }
+                else if (airtel1.test(airtel) == true) {
+                    alert("number is airtel");
+                }
+                else if (airtel2.test(airtel) == true) {
+                    alert("number is airtel")
+                }
+                else if (halo.test(halotel) == true) {
+                    alert("number is halotel")
+                }
+                else if (ttc.test(ttcl) == true) {
+                    alert("number is ttcl")
+                }
+                else {
+                    alert("the number is unknown")
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
